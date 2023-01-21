@@ -43,7 +43,7 @@ public class Employee implements Serializable {
     private User user;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "EMPLOYEE_TREATMENT",
+    @JoinTable(name = "TB_EMPLOYEE_TREATMENT",
             joinColumns = @JoinColumn(name = "EMPLOYEE_ID"),
             inverseJoinColumns = @JoinColumn(name = "TREATMENT_ID")
     )

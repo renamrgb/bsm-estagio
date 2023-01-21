@@ -33,7 +33,7 @@ public class Product implements Serializable {
     @Column(name = "TITLE")
     private String title;
 
-    @Column(name = "PRICE")
+    @Column(name = "PRICE", precision = 11, scale = 2)
     private BigDecimal price;
 
     @Column(name = "BRAND")

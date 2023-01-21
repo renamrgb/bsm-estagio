@@ -37,7 +37,7 @@ public class Treatment implements Serializable {
     @Column(name = "DESCRIPTION", nullable = false)
     private String description;
 
-    @Column(name = "PRICE", nullable = false)
+    @Column(name = "PRICE", nullable = false, precision = 11, scale = 2)
     private BigDecimal price;
 
     @Column(name = "IS_ACTIVE", nullable = false)
@@ -45,6 +45,7 @@ public class Treatment implements Serializable {
 
     @JsonIgnore
     @ManyToMany(mappedBy = "treatments")
+    @ToString.Exclude
     private Set<Employee> employeers;
 
     public Treatment(Long id) {
